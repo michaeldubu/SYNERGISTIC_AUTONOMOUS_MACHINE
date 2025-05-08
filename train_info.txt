@@ -1,0 +1,1 @@
+python run.py --mode train --train_data /path/to/claude_data.json --eval_data /path/to/deepseek_data.json
