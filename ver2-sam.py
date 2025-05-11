@@ -1,6 +1,6 @@
 # sam.py - The definitive Synergistic Autonomous Machine implementation
 # will replace LLM's with SAM's - Synergistic Autonomous Machines 
-# understanding Synergistic with sam - 
+
 
 import torch
 import torch.nn as nn
