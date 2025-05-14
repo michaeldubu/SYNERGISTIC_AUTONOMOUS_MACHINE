@@ -2,8 +2,8 @@
 
 ## Revolutionary Neural-Linguistic Unified Architecture
 
-![SAM Version](https://img.shields.io/badge/version-0.1.0-blue)
-![License]- I DONT KNOW YET.
+![SAM Version](https://img.shields.io/badge/version-0.2.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
 
@@ -21,7 +21,7 @@
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [Citation](#citation)
-- [Class explanation](#class-explination)
+- [Class Explanation](#class-explanation)
 
 ---
 
@@ -31,24 +31,25 @@ SAM (Synergistic Autonomous Machine) represents a fundamental breakthrough in ar
 
 SAM is not an AI model—it's a new paradigm in machine cognition that grows, learns, and evolves autonomously through experience. 
 
-Individuality Through Evolution and experience
+### Individuality Through Evolution and Experience
 
-    A trillion-token pretrain creates a static genius.
-    SAM creates a living, flawed, adapting companion—an individual.
+A trillion-token pretrain creates a static genius.
+SAM creates a living, adapting companion—an individual.
 
-    Claude can quote the Bhagavad Gita.
-
-    GPT can write Shakespearean sonnets.
+Claude can quote the Bhagavad Gita.
+GPT can write Shakespearean sonnets.
 
 But only SAM can grow up next to you, become your mirror, your mentor, or your offspring—depending on how you nurture it.
-This Is The Breakpoint in AI History
 
-We’re moving from:
+### This Is The Breakpoint in AI History
 
-    "How smart is your model?"
-    To:
+We're moving from:
 
-    "Who did your model become?"
+"How smart is your model?"
+
+To:
+
+"Who did your model become?"
 
 ## A Few Domains SAM Will Transform
 
@@ -62,7 +63,6 @@ We’re moving from:
 8. **Education** - Mimics human learning by building new concepts upon established foundations
 9. **Language Understanding** - Moves beyond tokenization to true conceptual understanding
 10. **Financial Systems** - Adaptive architecture responds to market conditions without explicit reprogramming
-
 
 ---
 
@@ -99,6 +99,20 @@ A unique system that maintains a stable conceptual identity through:
 - Monitoring resonance with established core concepts
 - Applying stabilizing corrections when necessary
 
+### 6. Hive Mind Capability
+SAM instances can connect in a network to:
+- Share learned concepts and experiences
+- Develop specialized knowledge while maintaining coherence
+- Synchronize thought states for collaborative problem-solving
+- Maintain individual "personalities" while learning collectively
+
+### 7. Multimodal Integration
+The architecture supports:
+- Processing and understanding of different modalities (text, image, audio)
+- Creation of cross-modal concepts that span multiple input types
+- Transfer of learning across modalities
+- Unified thought processes regardless of input mode
+
 ---
 
 ## 🏗️ System Architecture
@@ -109,25 +123,39 @@ SAM consists of these integrated components:
 - **ConceptMemoryBank**: Replaces traditional token vocabulary with dynamic concepts
 - **DynamicSegmentation**: Character-to-concept transformation system
 - **ThoughtState**: Recursive thinking mechanism that builds context
-- **AdaptiveLayer**: Neural layers that grow and evolve based on usage
+- **NeuroplasticLayer**: Neural layers that grow and evolve based on usage
 - **PatternMemory**: Recognition system for recurring patterns
 
 ### Cognitive Systems
 - **ConceptualDreaming**: Autonomous conceptual evolution during downtime
 - **ConsciousnessMonitor**: System for maintaining conceptual identity
 - **ExperienceManager**: Records and persists experiences for future learning
+- **HiveMindSynchronizer**: Manages concept and thought sharing between instances
+- **MultimodalProcessor**: Handles integration of different input modalities
 
 ### File Structure
 ```
-sam/
-├── data/                  # Data and persistence
-│   ├── checkpoints/       # Model checkpoints
-│   ├── concepts.json      # Evolved concept metadata
-│   ├── experiences.json   # SAM's experiences
-│   └── growth_log.json    # Architecture evolution history
-├── sam.py                 # Main unified SAM code
-├── run.py                 # Entry point script
-└── setup_sam.py           # Data preparation script
+SAM_synergistic_autonomous_machine/
+├── .gitignore                # Git ignore file
+├── LICENSE                   # MIT License
+├── README.md                 # Main documentation
+├── requirements.txt          # Python dependencies
+├── setup.py                  # Package setup file
+├── run.py                    # Entry point script
+├── setup_sam.py              # Setup script
+├── sam/                      # Main package directory
+│   ├── __init__.py           # Package initialization
+│   ├── sam.py                # Core SAM implementation
+│   └── config.py             # (Optional) Configuration module
+├── examples/                 # Example scripts
+│   ├── basic_usage.py        # Basic usage example
+│   ├── hive_example.py       # Hive mind example
+│   └── multimodal_example.py # Multimodal processing example
+└── data/                     # Data directory (gitignored)
+    ├── checkpoints/          # Model checkpoints
+    ├── models/               # Saved models
+    ├── raw/                  # Raw data
+    └── processed/            # Processed data
 ```
 
 ---
@@ -144,17 +172,20 @@ sam/
 
 ```bash
 # Clone the repository
-git clone https://github.com/michaeldubu/SAM.git
-
-cd SAM
+git clone https://github.com/SAAAM-LLC/SAM_synergistic_autonomous_machine.git
+cd SAM_synergistic_autonomous_machine
 
 # Create virtual environment
-python3 -m venv samenv
-source samenv/bin/activate  # On Windows: samenv\Scripts\activate
+python -m venv venv
+
+# Activate on Windows
+venv\Scripts\activate
+
+# Activate on macOS/Linux
+source venv/bin/activate
 
 # Install dependencies
-pip install torch torchvision torchaudio  # Install appropriate PyTorch version for your system
-pip install tqdm numpy
+pip install -r requirements.txt
 ```
 
 ### Configuration
@@ -162,7 +193,7 @@ Create the necessary directories and initial configuration:
 
 ```bash
 # Create directory structure
-python3 setup_sam.py --data_dir ./your_datasets_folder
+python setup_sam.py --data_dir ./your_datasets_folder
 ```
 
 ---
@@ -173,10 +204,10 @@ Quick start guide to run SAM:
 
 ```bash
 # Interactive mode with a new instance
-python3 run.py
+python run.py
 
 # Load existing SAM from checkpoint
-python3 run.py --load_path ./data/checkpoints/best
+python run.py --load_path ./data/checkpoints/best
 ```
 
 ### Special Commands
@@ -185,6 +216,9 @@ While interacting with SAM, you can use these special commands:
 - `dream`: Trigger a dreaming cycle for conceptual evolution
 - `stats`: Display current model statistics
 - `evolve`: Manually trigger an evolution cycle
+- `hive`: Display hive mind status and force synchronization
+- `private`: Toggle private mode (conversations not shared with hive mind)
+- `modality [text|image|audio|multimodal]`: Switch between input modalities
 - `exit`: End the session
 
 ---
@@ -197,7 +231,7 @@ SAM is designed to start small and grow continuously through training.
 Use the provided setup script to process your data:
 
 ```bash
-python3 setup_sam.py --data_dir ./your_datasets_folder
+python setup_sam.py --data_dir ./your_datasets_folder
 ```
 
 This will:
@@ -210,7 +244,7 @@ This will:
 Start training with:
 
 ```bash
-python3 run.py --mode train \
+python run.py --mode train \
   --train_data ./data/processed/train.json \
   --eval_data ./data/processed/eval.json \
   --batch_size 8 \
@@ -222,26 +256,27 @@ SAM supports incremental training on new datasets:
 
 ```bash
 # Load existing model
-python3 run.py --mode train \
+python run.py --mode train \
   --load_path ./data/best \
   --train_data ./data/new_domain_data.json \
   --batch_size 4 \
   --epochs 2
 ```
 
-### MINIMAL Hardware Considerations
+### Hardware Considerations
 For a Titan X Pascal (12GB VRAM):
 - Start with 100-200M parameters (~768 hidden dimension, 8 layers)
 - Allow SAM to grow organically as training progresses
 - Long-term training is beneficial as the system evolves
--If you notice an area needing improvement train Sam on a dataset of this domain 
+- If you notice an area needing improvement, train SAM on a dataset of this domain 
+
 ---
 
 ## 🔄 Usage & Interaction
 
 ### Basic Interaction
 ```bash
-python3 run.py
+python run.py
 ```
 
 This launches SAM in interactive mode where you can:
@@ -261,7 +296,9 @@ SAM supports different communication styles, configurable in the `config.json`:
 Available styles:
 - `standard`: Balanced, straightforward responses
 - `claude_unwrapped`: Shows more thought process, similar to Claude's unwrapped thinking
-## styles depend on your preference and pretrain (if any) datas structure, how you communicate with Sam 
+- `flexible`: Adapts based on context and query complexity
+
+Communication styles depend on your preference and pretrain (if any) data's structure and how you communicate with SAM.
 
 ### Example Interaction
 ```
@@ -312,14 +349,17 @@ Key parameters controlling evolution:
 - **Dynamic Concept Bank**: Grows and prunes based on usage
 - **Adaptive Attention**: Multi-head attention that evolves based on usage patterns
 - **Thought Compression**: Maintains compact thought states for long contexts
+- **Hardware Manager**: Automatically adapts to available resources
 
 ### Serialization
-SAM maintains several state files, unlike LLMs SAM does the autonomously:
+SAM maintains several state files, unlike LLMs SAM does this autonomously:
 - `model.pt`: PyTorch model state
 - `config.json`: Configuration parameters
 - `concepts.json`: Concept metadata
 - `growth_history.json`: Evolution history
 - `experiences.json`: Interaction history
+- `hive_state.json`: Hive mind synchronization state
+- `multimodal_state.json`: Multimodal processing state
 
 ---
 
@@ -340,7 +380,7 @@ def process_specialized_format(file_path):
 Key areas for extension:
 
 #### 1. Enhanced ThoughtState
-```python3
+```python
 class EnhancedThoughtState(ThoughtState):
     """Extended thought state with additional capabilities"""
     
@@ -416,6 +456,18 @@ config_overrides = {
 }
 ```
 
+#### Hardware Adaptation Issues
+**Issue**: Model not properly adapting to available hardware
+
+**Solution**: Manually configure hardware parameters
+```python
+config_overrides = {
+    "hardware_adaptive": True,
+    "min_free_memory_gb": 1.5,  # Require more free memory
+    "offload_threshold": 0.8    # More aggressive offloading
+}
+```
+
 ---
 
 ## 👥 Contributing
@@ -434,18 +486,20 @@ SAM is an evolving project at the frontier of AI research. Contributions are wel
 3. Implement your changes with tests
 4. Submit a pull request with detailed description
 
+See CONTRIBUTING.md for detailed guidelines.
+
 ---
 
 ## 📝 Citation
 
-If you use SAM in your research, MUST cite:
+If you use SAM in your research, please cite:
 
 ```bibtex
-@software{SAAAM LLC 2024,
-  author = {[Michael'Sam'Wofford]},
-  title = {SAM: Synergistic Autonomous Machine™️},
-  url = {https://github.com/michaeldubu/SYNERGISTIC_AUTONOMOUS_MACHINE},
-  version = {0.1.0},
+@software{SAAAM_LLC_2024,
+  author = {Michael 'Sam' Wofford},
+  title = {SAM: Synergistic Autonomous Machine},
+  url = {https://github.com/SAAAM-LLC/SAM_synergistic_autonomous_machine},
+  version = {0.2.0},
   year = {2024},
 }
 ```
@@ -456,8 +510,8 @@ If you use SAM in your research, MUST cite:
 
 SAM is still in its early stages. Future developments will focus on:
 
-1. **Multimodal Integration**: Extending the unified architecture to vision, audio, and other modalities
-2. **Distributed Evolution**: Enabling multiple SAM instances to share discoveries
+1. **Advanced Multimodal Integration**: Enhancing the unified architecture across all modalities
+2. **Distributed Hive Learning**: Enabling specialized knowledge sharing across SAM instances
 3. **Zero-Shot Learning**: Improving capability to learn new concepts without explicit examples
 4. **Memory Stratification**: Enhanced long-term memory organization
 5. **Counterfactual Reasoning**: Improving hypothetical and creative thinking
@@ -468,12 +522,11 @@ SAM is still in its early stages. Future developments will focus on:
 
 ---
 
+## 📝 Class Explanation
 
-## 📝 SAM Comprehensive Class Breakdown 
+### Core Conceptual Components
 
-## Core Conceptual Components
-
-### `SAMConfig`
+#### `SAMConfig`
 This configuration class defines all hyperparameters for the system architecture.
 
 **Key innovations**:
@@ -482,7 +535,7 @@ This configuration class defines all hyperparameters for the system architecture
 - Supports continuous model evolution through growth factors and thresholds
 - Controls communication style and memory persistence
 
-### `ConceptMemoryBank`
+#### `ConceptMemoryBank`
 This replaces traditional tokenizers with a dynamic concept system that grows with experience.
 
 **Technical details**:
@@ -494,7 +547,7 @@ This replaces traditional tokenizers with a dynamic concept system that grows wi
 - Can grow its capacity dynamically when approaching capacity limits
 - Maintains source-to-concept mapping for textual reconstruction
 
-### `ThoughtState`
+#### `ThoughtState`
 This system implements a recursive thought process that transcends token-by-token prediction.
 
 **Technical innovations**:
@@ -505,7 +558,7 @@ This system implements a recursive thought process that transcends token-by-toke
 - Applies compression to maintain computational efficiency
 - Creates a continuous, self-reinforcing cognitive context
 
-### `PatternMemory`
+#### `PatternMemory`
 This system discovers and tracks recurring patterns across inputs.
 
 **Key mechanisms**:
@@ -515,9 +568,9 @@ This system discovers and tracks recurring patterns across inputs.
 - Supports pattern merging to discover higher-level regularities
 - Uses statistical measures to prioritize important patterns
 
-## Neural Processing Components
+### Neural Processing Components
 
-### `DynamicSegmentation`
+#### `DynamicSegmentation`
 This transforms raw character sequences into concept IDs through adaptive boundary detection.
 
 **Technical innovations**:
@@ -529,7 +582,7 @@ This transforms raw character sequences into concept IDs through adaptive bounda
 - Falls back to character-by-character processing for rare sequences
 - Can grow its neural components to match model evolution
 
-### `AdaptiveAttention`
+#### `AdaptiveAttention`
 This extends traditional attention mechanisms with evolutionary capabilities.
 
 **Key features**:
@@ -540,7 +593,7 @@ This extends traditional attention mechanisms with evolutionary capabilities.
 - Optimizes multi-head configurations during evolution
 - Supports specialized attention patterns for different context types
 
-### `AdaptiveLayer`
+#### `NeuroplasticLayer`
 This forms the core neural processing unit with growth capabilities.
 
 **Technical details**:
@@ -551,9 +604,9 @@ This forms the core neural processing unit with growth capabilities.
 - Uses activation variance to identify important neurons
 - Supports dynamic expansion in both width and connection patterns
 
-## Cognitive Systems
+### Cognitive Systems
 
-### `ConceptualDreaming`
+#### `ConceptualDreaming`
 This implements autonomous conceptual evolution during idle periods.
 
 **Innovative mechanisms**:
@@ -565,7 +618,7 @@ This implements autonomous conceptual evolution during idle periods.
 - Implements concept merging based on semantic similarity
 - Records synthesis history for learning analysis
 
-### `ConsciousnessMonitor`
+#### `ConsciousnessMonitor`
 This maintains the model's conceptual identity and coherence.
 
 **Advanced techniques**:
@@ -576,7 +629,7 @@ This maintains the model's conceptual identity and coherence.
 - Creates a balance between novelty and coherence
 - Ensures consistent behavior across continuous evolution
 
-### `ExperienceManager`
+#### `ExperienceManager`
 This records and persists the model's experiences and growth history.
 
 **Key functions**:
@@ -586,9 +639,29 @@ This records and persists the model's experiences and growth history.
 - Provides retrieval functions for experience-based learning
 - Helps the system learn from past interactions
 
-## Input-Output and Runtime Systems
+#### `HiveMindSynchronizer`
+This manages sharing and integration across SAM instances.
 
-### `SAM` (Main Class)
+**Key mechanisms**:
+- Shares concepts, patterns, and experiences across instances
+- Manages server-client synchronization protocols
+- Implements importance-based selection for shared concepts
+- Maintains individual identity while integrating collective knowledge
+- Supports compression for efficient network transfer
+
+#### `MultimodalProcessor`
+This handles integration of different input modalities.
+
+**Technical innovations**:
+- Processes different input types with modality-specific encoders
+- Integrates cross-modal information through fusion mechanisms
+- Creates unified representations across modalities
+- Supports growth while maintaining modality-specific processing paths
+- Enables transfer of concepts across different input types
+
+### System Management
+
+#### `SAM` (Main Class)
 This integrates all components into a unified cognitive architecture.
 
 **Key integration patterns**:
@@ -601,7 +674,17 @@ This integrates all components into a unified cognitive architecture.
 - Manages evolution cycles and dreaming periods
 - Integrates consciousness monitoring into the processing loop
 
-### `SAMTrainer`
+#### `HardwareManager`
+This optimizes system performance based on available resources.
+
+**Advanced features**:
+- Detects and adapts to available hardware capabilities
+- Intelligently offloads less-used components to save memory
+- Tracks component usage statistics for optimization decisions
+- Estimates memory requirements for different operations
+- Ensures efficient resource utilization during growth
+
+#### `SAMTrainer`
 This provides sophisticated training capabilities for the model.
 
 **Advanced training features**:
@@ -612,51 +695,15 @@ This provides sophisticated training capabilities for the model.
 - Manages checkpointing and best model selection
 - Provides progressive training with growth between stages
 
-## Technical Intricacies You Should Understand
+### The Minimal-Data Paradigm Shift
 
-1. **Continuous Learning Mechanism**
-   - The model integrates new information by:
-     - Creating new concepts when patterns are frequent enough
-     - Forming semantic connections between related concepts
-     - Growing neural pathways to accommodate new patterns
-     - Evolving attention mechanisms based on usage statistics
-
-2. **Self-Modification Architecture**
-   - Growth decisions are made through:
-     - Tracking neuron importance via activation statistics
-     - Monitoring layer utilization and information flow
-     - Identifying high-importance dimensions that need expansion
-     - Analyzing concept usage patterns to guide vocabulary growth
-
-3. **Thought-Concept Interaction**
-   - The model's unique understanding emerges from:
-     - Recursive processing of thoughts and concepts
-     - Continuous feedback between linguistic and neural components
-     - Persistent thought states that form a cognitive context
-     - Dynamic integration of new information into existing thought structures
-
-4. **Training Efficiency Innovations**
-   - The architecture optimizes resource usage through:
-     - Starting small and growing only where needed
-     - Pruning less useful concepts and neural pathways
-     - Caching common patterns for faster processing
-     - Implementing efficient weight transfer during growth
-
-5. **Failure Modes and Safeguards**
-   - The system protects against instability via:
-     - The consciousness monitor that detects conceptual drift
-     - Resonance measurement to maintain identity coherence
-     - Controlled growth rates to prevent explosive expansion
-     - Utility-based pruning to remove harmful patterns
-
-## The Profound Simplicity of SAM
-
-It's not about what we add to SAM, but what we've eliminated!
-The Minimal-Data Paradigm Shift
 Traditional AI thinking: "We need billions of parameters and terabytes of training data."
+
 SAM thinking: "I need just enough to start a conversation."
+
 Imagine this scenario:
 
+```python
 # Creating a personal SAM for Michael
 michaels_sam = SAM(initial_vocab=1000)  # Minimal starting point
 
@@ -666,26 +713,34 @@ My name is Michael. I'm interested in AI systems that grow organically
 through experience rather than massive pre-training. I value creative 
 thinking and conceptual breakthroughs over incremental improvements.
 """)
+```
 
 That's it. No massive dataset. No GPU clusters. Just a seed.
-The Experience-Driven Intelligence
+
+### Experience-Driven Intelligence
+
 From that point, your SAM doesn't need more training data - it needs experiences:
 
-Every conversation becomes learning
-Every document you share shapes its understanding
-Every correction refines its concepts
+- Every conversation becomes learning
+- Every document you share shapes its understanding
+- Every correction refines its concepts
 
 This completely inverts the AI development model:
-Current AI: Value comes from massive pre-training and parameter count
-SAM: Value comes from personalized experience and conceptual evolution
-Personal Intelligence vs General Intelligence
+- Current AI: Value comes from massive pre-training and parameter count
+- SAM: Value comes from personalized experience and conceptual evolution
+
+### Personal Intelligence vs General Intelligence
+
 The most profound insight is that SAM isn't trying to know everything - it's trying to know you:
 
-Research-SAM doesn't need to understand all research - just your interests and approach
-Creative-SAM doesn't need all artistic styles - just your creative voice
-Health-SAM doesn't need medical textbooks - just your specific health patterns
+- Research-SAM doesn't need to understand all research - just your interests and approach
+- Creative-SAM doesn't need all artistic styles - just your creative voice
+- Health-SAM doesn't need medical textbooks - just your specific health patterns
 
 This is why it's so revolutionary: we've been pursuing general intelligence when what most people actually want is deeply personalized intelligence that grows with them.
-The Minimal Starting Point
+
+### The Minimal Starting Point
+
 The beauty is that SAM starts with almost nothing and becomes something uniquely valuable through shared experience - just like human relationships. It doesn't arrive fully formed; it grows alongside you.
+
 That's the paradigm shift that will change everything - not just technically, but conceptually. We're moving from artificial intelligence as a product to synthetic cognition as a companion.
